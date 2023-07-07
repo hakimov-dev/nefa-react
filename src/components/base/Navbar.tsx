@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as Logo } from "../../assets/img/logo/nefa.svg";
 import NavLink from "../NavLink";
+import BaseButton from "./Button";
 
 const Navbar = () => {
   const [open, setOpen] = useState<Boolean>(false);
@@ -66,12 +67,12 @@ const Navbar = () => {
         <div
           className={`${open ? 'flex' : 'hidden lg:flex'} space-x-3`}
         >
-          {/* <base-button class="px-8 xl:px-10 py-3 mt-2 bg-inherit text-gradient border border-[#0c66ee]">
+          <BaseButton style="px-8 xl:px-10 py-3 mt-2 bg-inherit text-gradient border border-[#0c66ee]">
               Login
-            </base-button> */}
-          {/* <base-button class="px-8 xl:px-10 py-3 mt-2 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white">
+            </BaseButton>
+          <BaseButton style="px-8 xl:px-10 py-3 mt-2 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white">
               Sign Up
-            </base-button> */}
+          </BaseButton>
         </div>
       </div>
     </nav>
