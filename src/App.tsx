@@ -64,7 +64,6 @@ function App() {
                   />
                 </svg>
 
-                {/* <ChevronDownIcon :size="20" class="mt-1 text-[#0c66ee]" /> */}
               </BaseButton>
             </div>
           </div>
@@ -73,34 +72,34 @@ function App() {
               <img
                 data-aos="fade-up"
                 data-aos-once="true"
-                // :src="require('~/assets/img/hero-image.webp')"
+                src={require('./assets/img/hero-image.webp')}
                 className="-mt-4"
-                alt=""
+                alt="hero image"
               />
             </div>
           </div>
           <img
             data-aos="fade-up"
             data-aos-delay="300"
-            // :src="require('~/assets/img/pattern/ellipse-1.png')"
+            src={require('./assets/img/pattern/ellipse-1.png')}
             className="hidden sm:block absolute bottom-12 xl:bottom-16 left-4 xl:left-0 w-6"
           />
           <img
             data-aos="fade-up"
             data-aos-delay="300"
-            // :src="require('~/assets/img/pattern/ellipse-2.png')"
+            src={require('./assets/img/pattern/ellipse-2.png')}
             className="hidden sm:block absolute top-4 sm:top-10 right-64 sm:right-96 xl:right-[32rem] w-6"
           />
           <img
             data-aos="fade-up"
             data-aos-delay="300"
-            // :src="require('~/assets/img/pattern/ellipse-3.png')"
+            src={require('./assets/img/pattern/ellipse-3.png')}
             className="hidden sm:block absolute bottom-56 right-24 w-6"
           />
           <img
             data-aos="fade-up"
             data-aos-delay="300"
-            // :src="require('~/assets/img/pattern/star.png')"
+            src={require('./assets/img/pattern/star.png')}
             className="hidden sm:block absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
           />
           </BaseSection>
