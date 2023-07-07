@@ -64,8 +64,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div
-          //   :class="[open ? 'flex' : 'hidden lg:flex']"
-          className="space-x-3"
+          className={`${open ? 'flex' : 'hidden lg:flex'} space-x-3`}
         >
           {/* <base-button class="px-8 xl:px-10 py-3 mt-2 bg-inherit text-gradient border border-[#0c66ee]">
               Login
