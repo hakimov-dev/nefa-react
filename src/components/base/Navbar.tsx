@@ -3,7 +3,6 @@ import { ReactComponent as Logo } from '../../assets/img/logo/nefa.svg';
 
 const Navbar = () => {
   const [open, setOpen] = useState<Boolean>(false);
-  const [dropdownNavbar, setDropDown] = useState<Boolean>(false);
 
   return (
     <nav id="navbar" className="relative z-10 w-full text-neutral-800">
@@ -12,11 +11,6 @@ const Navbar = () => {
           <div className="w-full flex flex-row items-center justify-between py-6">
             <div>
                 <Logo />
-              {/* <img
-                src="../../assets/img/logo/nefa.png"
-                className="w-24 xl:w-28"
-                alt="Nefa Logo"
-              /> */}
             </div>
             <button
               className="rounded-lg lg:hidden focus:outline-none focus:shadow-outline"
