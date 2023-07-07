@@ -1,11 +1,13 @@
 import React from 'react';
+// Layouts
+import DefaultLayout from './layouts/default'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <DefaultLayout>
         <h1>Hello world!</h1>
-      </header>
+      </DefaultLayout>
     </div>
   );
 }
