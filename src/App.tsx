@@ -3,6 +3,7 @@ import React from "react";
 import DefaultLayout from "./layouts/default";
 // Components
 import BaseButton from "./components/base/Button";
+import BaseSection from "./components/base/Section";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <DefaultLayout>
         {/* <!-- Hero section --> */}
         <section id="hero" className="w-full pb-24">
-          {/* <BaseSection> */}
+          <BaseSection>
           <div className="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
             <span
               data-aos="fade-right"
@@ -102,7 +103,7 @@ function App() {
             // :src="require('~/assets/img/pattern/star.png')"
             className="hidden sm:block absolute top-20 sm:top-28 right-16 lg:right-0 lg:left-[30rem] w-8"
           />
-          {/* </BaseSection> */}
+          </BaseSection>
         </section>
       </DefaultLayout>
     </div>
