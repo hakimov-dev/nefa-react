@@ -1,21 +1,21 @@
 import React from "react";
 
 interface MyComponentProps {
-    url: String,
-    name: String
+  url: String;
+  name: String;
 }
 
 const NavLink = (props: MyComponentProps) => {
-    return (
-        <li className="w-full">
-        <a
-          className="md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline"
-           href={`${props.url}`}
-        >
-          { props.name }
-        </a>
-      </li>
-    )
-}
+  return (
+    <li className="w-full">
+      <a
+        className="md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900"
+        href={`${props.url}`}
+      >
+        {props.name}
+      </a>
+    </li>
+  );
+};
 
-export default NavLink
+export default NavLink;
