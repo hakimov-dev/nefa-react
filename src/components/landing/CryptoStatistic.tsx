@@ -1,62 +1,124 @@
 import React from "react";
 
-const CryptoStatistic = (title: string, datasets: object[]) => {
-    return (
-        <div className="w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6" v-bind="$attrs">
-        <div className="w-full flex items-center justify-between">
-          <span className="font-medium">{ title }</span>
-          <button
-            className="px-3 py-1 text-sm font-medium text-blue-500 flex items-center space-x-1 rounded-md hover:bg-blue-50 transition duration-300"
+interface cryptoData {
+    id: number,
+    name: string,
+    price: number,
+    logo: string,
+    increase: boolean,
+    data: number[]
+}
+
+const CryptoStatistic = (props: any) => {
+
+    console.log(props.datasets)
+  return (
+    <div
+      className={`w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6 ${props.style}`}
+      v-bind="$attrs"
+    >
+      <div className="w-full flex items-center justify-between">
+        <span className="font-medium">{props.title}</span>
+        <button className="px-3 py-1 text-sm font-medium text-blue-500 flex items-center space-x-1 rounded-md hover:bg-blue-50 transition duration-300">
+          <span>More</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="h-4"
           >
-            <span>More</span>
-            {/* <ChevronRightIcon :size="16" /> */}
-          </button>
-        </div>
-        <div className="flex flex-col">
-          <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div className="px-2 sm:px-6 py-2 align-middle inline-block min-w-full overflow-hidden">
-              <table className="min-w-full">
-                <thead>
-                  <tr>
-                    <th className="text-left text-sm font-medium text-gray-500">Name</th>
-                    <th className="text-left text-sm font-medium text-gray-500">Price</th>
-                    <th className="hidden sm:block text-left text-sm font-medium text-gray-500">Chart</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="data in datasets" className="border-b border-gray-200">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+      </div>
+      <div className="flex flex-col">
+        <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div className="px-2 sm:px-6 py-2 align-middle inline-block min-w-full overflow-hidden">
+            <table className="min-w-full">
+              <thead>
+                <tr>
+                  <th className="text-left text-sm font-medium text-gray-500">
+                    Name
+                  </th>
+                  <th className="text-left text-sm font-medium text-gray-500">
+                    Price
+                  </th>
+                  <th className="hidden sm:block text-left text-sm font-medium text-gray-500">
+                    Chart
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {props.datasets.map((data: cryptoData) => {
+                  <tr
+                    className="border-b border-gray-200"
+                  >
                     <td className="py-4 whitespace-nowrap">
                       <div className="flex items-center space-x-2">
-                        <img 
-                        // :src="require(`~/assets/img/crypto-icon/${data.logo}`)"
-                         alt="" />
-                        <span>{ 
-                            // data.name 
-                            }</span>
+                        {/* <img
+                          src={require(`../../assets/img/crypto-icon/${data.logo}`)}
+                          alt=""
+                        /> */}
+                        <span>{data.name}</span>
                       </div>
                     </td>
                     <td className="py-4 whitespace-nowrap">
-                      <div className="flex items-center">
-                        {/* {/* <PlusThickIcon v-if="data.increase" :size="14" class="text-emerald-500" /> */}
-                        {/* <MinusThickIcon v-else :size="14" class="text-red-500" /> */}
-                        <span>${ 
-                            // data.price 
-                            }</span>
-                      </div>
+                      {/* <div className="flex items-center">
+                        {data.increase ? (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            className="h-4 text-emerald-500"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M12 6v12m6-6H6"
+                            />
+                          </svg>
+                        ) : (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            className="h-4 text-red-500"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M18 12H6"
+                            />
+                          </svg>
+                        )}
+                        <span>${data.price}</span>
+                      </div> */}
                     </td>
                     <td className="hidden sm:block whitespace-nowrap">
-                      <div>
+                        some
+                      {/* <div> */}
                         {/* <LineChart class="w-28 h-12 -mx-2" :datasets="data.data" :increase="data.increase" /> */}
-                      </div>
+                      {/* </div> */}
                     </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                  </tr>;
+                })}
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-    )
-}
+    </div>
+  );
+};
 
-export default CryptoStatistic
+export default CryptoStatistic;
