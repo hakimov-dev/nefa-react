@@ -4,6 +4,8 @@
 *{
   transition: all .3s linear;
   font-family: Poppins, sans-serif;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 input::-webkit-outer-spin-button,
