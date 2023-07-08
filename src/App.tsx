@@ -4,6 +4,7 @@ import DefaultLayout from "./layouts/default";
 // Components
 import BaseButton from "./components/base/Button";
 import BaseSection from "./components/base/Section";
+import BaseAccordion from "./components/base/Accordion"
 import LandingCryptoStatistic from "./components/landing/CryptoStatistic";
 import LandingExchange from "./components/landing/Exchange";
 import LandingListItem from "./components/landing/ListItem";
@@ -570,7 +571,11 @@ function App() {
           <h2 className="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
 
           <ul className="shadow-box">
-            {/* <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" /> */}
+            {accordions.map((accordion: any) => {
+                return (
+                  <BaseAccordion  accordion={accordion} />
+                )
+            })}
           </ul>
         </div>
       </BaseSection>
