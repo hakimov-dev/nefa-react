@@ -633,8 +633,6 @@ function App() {
                 clipRule="evenodd"
               />
             </svg>
-
-            {/* <ArrowUpIcon :size="20" /> */}
           </a>
         </div>
       </DefaultLayout>
