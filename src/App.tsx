@@ -5,6 +5,7 @@ import DefaultLayout from "./layouts/default";
 import BaseButton from "./components/base/Button";
 import BaseSection from "./components/base/Section";
 import LandingCryptoStatistic from "./components/landing/CryptoStatistic";
+import LandingExchange from "./components/landing/Exchange";
 
 function App() {
   const trendings = [
@@ -109,6 +110,29 @@ function App() {
       data: [35, 30, 60, 50, 35, 45, 40],
     },
   ];
+
+  const currencies = [
+    {
+      img: "country-icon/eng.png",
+      name: "USD",
+    },
+  ];
+
+  const cryptoSelected = {
+    img: "crypto-icon/bitcoin.png",
+    name: "BTC",
+  };
+  const cryptocurrencies = [
+    {
+      img: "crypto-icon/bitcoin.png",
+      name: "BTC",
+    },
+  ];
+
+  const currencySelected = {
+    img: "country-icon/eng.png",
+    name: "USD",
+  };
 
   return (
     <div className="App">
@@ -253,28 +277,32 @@ function App() {
                 Crypto Coin. We accept BTC crypto-currency
               </p>
               <div className="space-y-6 lg:pr-12">
-                {/* <LandingExchange
-              title="Amount"
-              name="amount"
-              type="number"
-              default-value="5.000"
-              :exchange-selected="currencySelected"
-              :exchanges="currencies"
-            /> */}
-                {/* <LandingExchange
+                <LandingExchange
+                  title="Amount"
+                  name="amount"
+                  type="number"
+                  defaultValue="5.000"
+                  exchangeSelected={currencySelected}
+                  exchanges={currencies}
+                />
+                <LandingExchange
               title="Get"
               name="get"
               type="number"
-              default-value="0.10901"
-              :exchange-selected="cryptoSelected"
-              :exchanges="cryptocurrencies"
-            /> */}
+              defaultValue="0.10901"
+              exchangeSelected={cryptoSelected}
+              exchanges={cryptocurrencies}
+            />
                 <BaseButton style="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">
                   Buy Now
                 </BaseButton>
               </div>
             </div>
-            <div data-aos="fade-left"  className="col-span-12 lg:col-span-6 hidden sm:block" v-bind="$attrs">
+            <div
+              data-aos="fade-left"
+              className="col-span-12 lg:col-span-6 hidden sm:block"
+              v-bind="$attrs"
+            >
               <div className="w-full">
                 <img
                   src={require("./assets/img/buy-and-trade.webp")}
