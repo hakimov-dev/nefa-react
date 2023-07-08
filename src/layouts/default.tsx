@@ -16,6 +16,7 @@ const Default: React.FC<SlotComponentProps> = ({ children }) =>  {
          {/* Content */}
          {children}
 
+         <a title="Support project" target="_blank" className="fixed bottom-5 right-4 z-50" href="https://www.buymeacoffee.com/hakimovDev"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&amp;emoji=&amp;slug=hakimovDev&amp;button_colour=FFDD00&amp;font_colour=000000&amp;font_family=Lato&amp;outline_colour=000000&amp;coffee_colour=ffffff" /></a>
         <Footer/>
       </div>
     </div>
