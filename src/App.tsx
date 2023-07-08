@@ -4,11 +4,11 @@ import DefaultLayout from "./layouts/default";
 // Components
 import BaseButton from "./components/base/Button";
 import BaseSection from "./components/base/Section";
-import BaseAccordion from "./components/base/Accordion"
+import BaseAccordion from "./components/base/Accordion";
 import LandingCryptoStatistic from "./components/landing/CryptoStatistic";
 import LandingExchange from "./components/landing/Exchange";
 import LandingListItem from "./components/landing/ListItem";
-import LandingStep from "./components/landing/Step"
+import LandingStep from "./components/landing/Step";
 
 function App() {
   const trendings = [
@@ -139,47 +139,47 @@ function App() {
 
   const steps = [
     {
-      img: 'sign-up.png',
-      title: 'Sign Up',
+      img: "sign-up.png",
+      title: "Sign Up",
       description:
-        'Sign up for your free NEFA Wallet on web, iOS or Android and follow our easy process to set up your profile',
+        "Sign up for your free NEFA Wallet on web, iOS or Android and follow our easy process to set up your profile",
     },
     {
-      img: 'fund.png',
-      title: 'Fund',
+      img: "fund.png",
+      title: "Fund",
       description:
-        'Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet',
+        "Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet",
     },
     {
-      img: 'buy-crypto.png',
-      title: 'Buy Crypto',
+      img: "buy-crypto.png",
+      title: "Buy Crypto",
       description:
-        'Buy Bitcoin or Ethereum, then securely store it in your Wallet or send it on easily to your friends anywhere',
+        "Buy Bitcoin or Ethereum, then securely store it in your Wallet or send it on easily to your friends anywhere",
     },
-  ]
+  ];
 
   const accordions = [
     {
-      title: 'Why should I choose NEFA?',
+      title: "Why should I choose NEFA?",
       description:
         "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over 8 million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
     },
     {
-      title: 'How secure is NEFA?',
+      title: "How secure is NEFA?",
       description:
         "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
     },
     {
-      title: 'Do I have to buy a whole Bitcoin?',
+      title: "Do I have to buy a whole Bitcoin?",
       description:
         "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
     },
     {
-      title: 'How do I actually buy Bitcoin?',
+      title: "How do I actually buy Bitcoin?",
       description:
         "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
     },
-  ]
+  ];
 
   return (
     <div className="App">
@@ -485,7 +485,10 @@ function App() {
                 </BaseButton>
               </div>
             </div>
-            <div data-aos="fade-left" className="col-span-12 lg:col-span-6 hidden sm:block">
+            <div
+              data-aos="fade-left"
+              className="col-span-12 lg:col-span-6 hidden sm:block"
+            >
               <div className="w-full sm:mt-20 xl:mt-0">
                 <img
                   src={require(`./assets/img/advanced-trading-tools.webp`)}
@@ -497,89 +500,143 @@ function App() {
           </div>
         </section>
         {/* <!-- Industry-leading security section --> */}
-    <section className="w-full my-24">
-      <div className="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
-        <div data-aos="fade-right" className="col-span-12 lg:col-span-6">
-          <div className="w-full">
-            <img src={require('./assets/img/industry-leading-security.webp')} className="w-full" alt="" />
+        <section className="w-full my-24">
+          <div className="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+            <div data-aos="fade-right" className="col-span-12 lg:col-span-6">
+              <div className="w-full">
+                <img
+                  src={require("./assets/img/industry-leading-security.webp")}
+                  className="w-full"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              data-aos="fade-left"
+              className="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8"
+            >
+              <h2 className="text-4xl font-semibold">
+                Industry-leading security from day one
+              </h2>
+              <ul className="space-y-8 sm:space-y-4">
+                <LandingListItem title="Safety, security and compliance">
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    NEFA is a licensed New York trust company that undergoes
+                    regular bank exams and is subject to the cybersecurity
+                    audits conducted by the New York Department of Financial
+                    Services.
+                    <span className="underline">Learn more</span> about our
+                    commitment to security.
+                  </p>
+                </LandingListItem>
+                <LandingListItem title="Hardware security keys">
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    With NEFA you can secure your account with a hardware
+                    security key via WebAuthn.
+                  </p>
+                </LandingListItem>
+                <LandingListItem title="SOC Certifications">
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    NEFA is <span className="underline">SOC 1 Type 2</span> and
+                    <span className="underline">SOC 2 Type 2</span> compliant.
+                    We are the world’s first cryptocurrency exchange and
+                    custodian to complete these exams.
+                  </p>
+                </LandingListItem>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div data-aos="fade-left" className="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
-          <h2 className="text-4xl font-semibold">Industry-leading security from day one</h2>
-          <ul className="space-y-8 sm:space-y-4">
-            <LandingListItem title="Safety, security and compliance">
-              <p className="text-sm text-gray-700 leading-relaxed">
-                NEFA is a licensed New York trust company that undergoes regular bank exams and is subject to the
-                cybersecurity audits conducted by the New York Department of Financial Services.
-                <span className="underline">Learn more</span> about our commitment to security.
-              </p>
-            </LandingListItem>
-            <LandingListItem title="Hardware security keys">
-              <p className="text-sm text-gray-700 leading-relaxed">
-                With NEFA you can secure your account with a hardware security key via WebAuthn.
-              </p>
-            </LandingListItem>
-            <LandingListItem title="SOC Certifications">
-              <p className="text-sm text-gray-700 leading-relaxed">
-                NEFA is <span className="underline">SOC 1 Type 2</span> and
-                <span className="underline">SOC 2 Type 2</span> compliant. We are the world’s first cryptocurrency exchange
-                and custodian to complete these exams.
-              </p>
-            </LandingListItem>
-          </ul>
-        </div>
-      </div>
-    </section>
-    {/* <!-- Getting started section --> */}
-    <section className="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
-      <div className="w-full py-16 flex flex-col items-center">
-        <h2 data-aos="flip-down" className="text-3xl sm:text-4xl font-semibold text-center">
-          Get started in just a few minutes
-        </h2>
-        <div
-          data-aos="fade-up"
-          className="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0 px-4 xl:px-10 mt-16 sm:mt-8"
-        >
-          {steps.map((step) => {
-            return (
-              <LandingStep step={step} />
-            )
-          })}
-          <img
-            src={require('./assets/img/getting-started/arrow.png')}
-            className="hidden lg:inline-block absolute top-32 left-64 xl:left-[22rem] w-24 xl:w-[9.5rem]"
-            alt=""
-          />
-          <img
-            src={require('./assets/img/getting-started/arrow.png')}
-            className="hidden lg:inline-block absolute top-32 right-64 xl:right-[22rem] w-24 xl:w-[9.5rem]"
-            alt=""
-          />
-        </div>
-      </div>
-    </section>
-    {/* <!-- FAQ section --> */}
-    <section className="w-full my-24">
-      <BaseSection>
-        <div data-aos="fade-right" data-aos-delay="150" className="col-span-12 lg:col-span-6">
-          <div className="w-full">
-            <img src={require('./assets/img/faq.webp')} className="w-full" alt="" />
+        </section>
+        {/* <!-- Getting started section --> */}
+        <section className="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
+          <div className="w-full py-16 flex flex-col items-center">
+            <h2
+              data-aos="flip-down"
+              className="text-3xl sm:text-4xl font-semibold text-center"
+            >
+              Get started in just a few minutes
+            </h2>
+            <div
+              data-aos="fade-up"
+              className="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0 px-4 xl:px-10 mt-16 sm:mt-8"
+            >
+              {steps.map((step) => {
+                return <LandingStep step={step} />;
+              })}
+              <img
+                src={require("./assets/img/getting-started/arrow.png")}
+                className="hidden lg:inline-block absolute top-32 left-64 xl:left-[22rem] w-24 xl:w-[9.5rem]"
+                alt=""
+              />
+              <img
+                src={require("./assets/img/getting-started/arrow.png")}
+                className="hidden lg:inline-block absolute top-32 right-64 xl:right-[22rem] w-24 xl:w-[9.5rem]"
+                alt=""
+              />
+            </div>
           </div>
-        </div>
-        <div data-aos="fade-left" data-aos-delay="150" className="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
-          <span className="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">Support</span>
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
+        </section>
+        {/* <!-- FAQ section --> */}
+        <section className="w-full my-24">
+          <BaseSection>
+            <div
+              data-aos="fade-right"
+              data-aos-delay="150"
+              className="col-span-12 lg:col-span-6"
+            >
+              <div className="w-full">
+                <img
+                  src={require("./assets/img/faq.webp")}
+                  className="w-full"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              data-aos="fade-left"
+              data-aos-delay="150"
+              className="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8"
+            >
+              <span className="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">
+                Support
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">
+                Frequently asked questions
+              </h2>
 
-          <ul className="shadow-box">
-            {accordions.map((accordion: any) => {
-                return (
-                  <BaseAccordion  accordion={accordion} />
-                )
-            })}
-          </ul>
+              <ul className="shadow-box">
+                {accordions.map((accordion: any) => {
+                  return <BaseAccordion accordion={accordion} />;
+                })}
+              </ul>
+            </div>
+          </BaseSection>
+        </section>
+
+        <div className="w-full my-10 flex justify-center">
+          <a
+            data-aos="flip-down"
+            data-aos-delay="150"
+            href="#"
+            className="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
+          >
+            <span>Back to top</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="h-4"
+            >
+              <path
+                fillRule="evenodd"
+                d="M11.47 2.47a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06l-6.22-6.22V21a.75.75 0 01-1.5 0V4.81l-6.22 6.22a.75.75 0 11-1.06-1.06l7.5-7.5z"
+                clipRule="evenodd"
+              />
+            </svg>
+
+            {/* <ArrowUpIcon :size="20" /> */}
+          </a>
         </div>
-      </BaseSection>
-    </section>
       </DefaultLayout>
     </div>
   );
