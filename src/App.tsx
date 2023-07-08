@@ -227,6 +227,42 @@ function App() {
         />
           </div>
         </section>
+
+        {/* <!-- Buy and trade section --> */}
+    <section className="w-full my-24">
+      <BaseSection>
+        {/* <LandingBuyTradeImage className="sm:hidden mb-8" /> */}
+        <div data-aos="fade-right" className="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
+          <h2 className="text-4xl font-semibold sm:pr-8 xl:pr-12">
+            Buy & trade on the <br className="hidden sm:block" />
+            original crypto exchange.
+          </h2>
+          <p className="paragraph">
+            Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC crypto-currency
+          </p>
+          <div className="space-y-6 lg:pr-12">
+            {/* <LandingExchange
+              title="Amount"
+              name="amount"
+              type="number"
+              default-value="5.000"
+              :exchange-selected="currencySelected"
+              :exchanges="currencies"
+            /> */}
+            {/* <LandingExchange
+              title="Get"
+              name="get"
+              type="number"
+              default-value="0.10901"
+              :exchange-selected="cryptoSelected"
+              :exchanges="cryptocurrencies"
+            /> */}
+            <BaseButton style="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">Buy Now</BaseButton>
+          </div>
+        </div>
+        {/* <LandingBuyTradeImage data-aos="fade-left" class="hidden sm:block" /> */}
+      </BaseSection>
+    </section>
       </DefaultLayout>
     </div>
   );
