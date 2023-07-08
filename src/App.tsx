@@ -135,6 +135,27 @@ function App() {
     name: "USD",
   };
 
+  const steps = [
+    {
+      img: 'sign-up.png',
+      title: 'Sign Up',
+      description:
+        'Sign up for your free NEFA Wallet on web, iOS or Android and follow our easy process to set up your profile',
+    },
+    {
+      img: 'fund.png',
+      title: 'Fund',
+      description:
+        'Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet',
+    },
+    {
+      img: 'buy-crypto.png',
+      title: 'Buy Crypto',
+      description:
+        'Buy Bitcoin or Ethereum, then securely store it in your Wallet or send it on easily to your friends anywhere',
+    },
+  ]
+
   return (
     <div className="App">
       <DefaultLayout>
@@ -450,6 +471,64 @@ function App() {
             </div>
           </div>
         </section>
+        {/* <!-- Industry-leading security section --> */}
+    <section className="w-full my-24">
+      <div className="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
+        <div data-aos="fade-right" className="col-span-12 lg:col-span-6">
+          <div className="w-full">
+            <img src={require('./assets/img/industry-leading-security.webp')} className="w-full" alt="" />
+          </div>
+        </div>
+        <div data-aos="fade-left" className="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
+          <h2 className="text-4xl font-semibold">Industry-leading security from day one</h2>
+          <ul className="space-y-8 sm:space-y-4">
+            <LandingListItem title="Safety, security and compliance">
+              <p className="text-sm text-gray-700 leading-relaxed">
+                NEFA is a licensed New York trust company that undergoes regular bank exams and is subject to the
+                cybersecurity audits conducted by the New York Department of Financial Services.
+                <span className="underline">Learn more</span> about our commitment to security.
+              </p>
+            </LandingListItem>
+            <LandingListItem title="Hardware security keys">
+              <p className="text-sm text-gray-700 leading-relaxed">
+                With NEFA you can secure your account with a hardware security key via WebAuthn.
+              </p>
+            </LandingListItem>
+            <LandingListItem title="SOC Certifications">
+              <p className="text-sm text-gray-700 leading-relaxed">
+                NEFA is <span className="underline">SOC 1 Type 2</span> and
+                <span className="underline">SOC 2 Type 2</span> compliant. We are the world’s first cryptocurrency exchange
+                and custodian to complete these exams.
+              </p>
+            </LandingListItem>
+          </ul>
+        </div>
+      </div>
+    </section>
+    {/* <!-- Getting started section --> */}
+    <section className="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
+      <div className="w-full py-16 flex flex-col items-center">
+        <h2 data-aos="flip-down" className="text-3xl sm:text-4xl font-semibold text-center">
+          Get started in just a few minutes
+        </h2>
+        <div
+          data-aos="fade-up"
+          className="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0 px-4 xl:px-10 mt-16 sm:mt-8"
+        >
+          {/* <LandingStep v-for="step in steps" :key="step.title" :step="step" /> */}
+          <img
+            src={require('./assets/img/getting-started/arrow.png')}
+            className="hidden lg:inline-block absolute top-32 left-64 xl:left-[22rem] w-24 xl:w-[9.5rem]"
+            alt=""
+          />
+          <img
+            src={require('./assets/img/getting-started/arrow.png')}
+            className="hidden lg:inline-block absolute top-32 right-64 xl:right-[22rem] w-24 xl:w-[9.5rem]"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
       </DefaultLayout>
     </div>
   );
