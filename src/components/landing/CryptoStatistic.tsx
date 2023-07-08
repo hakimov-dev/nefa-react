@@ -1,4 +1,5 @@
 import React from "react";
+// import LineChart from "../LineChart";
 
 interface cryptoData {
     id: number,
@@ -107,9 +108,9 @@ const CryptoStatistic = (props: any) => {
                       </div>
                     </td>
                     <td className="hidden sm:block whitespace-nowrap">
-                      {/* <div> */}
-                        {/* <LineChart class="w-28 h-12 -mx-2" :datasets="data.data" :increase="data.increase" /> */}
-                      {/* </div> */}
+                      <div className="w-28 h-12 -mx-2">
+                        <img draggable="false" src={require(`../../assets/img/${data.increase ? 'chart.png' : 'red-chart.png'}`)} alt="" />
+                      </div>
                     </td>
                   </tr>
                  )
