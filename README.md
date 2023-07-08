@@ -1,6 +1,25 @@
-# Getting Started with Create React App
+# Nefa landing page
+![thumbnail](https://github.com/hakimov-dev/nefa-react/assets/83240328/66e7c255-4a33-46dd-9268-883ab352478e)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Support Project 😇
+<a href="https://www.buymeacoffee.com/hakimovDev"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=hakimovDev&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
+
+## Versions 🔗
+[Vue(nuxt js) version](https://github.com/RSurya99/nefa)
+
+## About this project 👨‍💻
+
+The NEFA Landing Template is a modern and sleek landing page template created using a combination of React, TypeScript, and Aos (Animate on Scroll) library. It offers a visually appealing and interactive design that is perfect for showcasing products, services, or any other promotional content.
+
+Built with React, the NEFA Landing Template provides a highly flexible and efficient development environment. React's component-based architecture allows for modular and reusable code, making it easy to customize and extend the template according to specific needs. The use of TypeScript adds static typing and enhances code reliability and maintainability.
+
+One of the notable features of the NEFA Landing Template is its integration of the Aos library. Aos enables smooth and eye-catching animations that are triggered as the user scrolls through the page. These animations add a touch of elegance and interactivity, capturing the attention of visitors and creating an engaging browsing experience.
+
+The NEFA Landing Template offers a responsive layout, ensuring that the landing page looks stunning and functions seamlessly across different devices and screen sizes. Whether accessed on a desktop, laptop, tablet, or smartphone, the template automatically adjusts its elements to provide optimal viewing and usability.
+
+In terms of design, the NEFA Landing Template presents a clean and modern aesthetic. It combines a minimalist approach with carefully chosen typography, color schemes, and imagery to create a visually appealing and professional-looking landing page. The template's layout is thoughtfully organized, allowing for easy navigation and highlighting key information or call-to-action sections.
+
+Overall, the NEFA Landing Template provides a powerful foundation for creating captivating landing pages. With its utilization of React, TypeScript, and Aos, it offers a seamless development experience, stunning animations, and a visually appealing design, making it an excellent choice for businesses or individuals looking to make a strong impression with their online presence.
 
 ## Available Scripts
 
