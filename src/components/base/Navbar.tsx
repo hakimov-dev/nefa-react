@@ -6,6 +6,10 @@ import BaseButton from "./Button";
 const Navbar = () => {
   const [open, setOpen] = useState<Boolean>(false);
 
+
+  function toggleSidebar(){
+    setOpen(!open)
+  }
   return (
     <nav id="navbar" className="relative z-10 w-full text-neutral-800">
       <div className="flex flex-col max-w-screen-xl px-8 mx-auto lg:items-center lg:justify-between lg:flex-row py-4">
@@ -16,7 +20,7 @@ const Navbar = () => {
             </div>
             <button
               className="rounded-lg lg:hidden focus:outline-none focus:shadow-outline"
-              //   @click="open = !open"
+              onClick={toggleSidebar}
             >
               {!open && (
                 <svg
