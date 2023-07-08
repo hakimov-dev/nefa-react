@@ -4,111 +4,111 @@ import DefaultLayout from "./layouts/default";
 // Components
 import BaseButton from "./components/base/Button";
 import BaseSection from "./components/base/Section";
-import LandingCryptoStatistic from "./components/landing/CryptoStatistic"
+import LandingCryptoStatistic from "./components/landing/CryptoStatistic";
 
 function App() {
   const trendings = [
     {
       id: 1,
-      name: 'Bitcoin',
+      name: "Bitcoin",
       price: 43180.13,
-      logo: 'bitcoin.png',
+      logo: "bitcoin.png",
       increase: true,
       data: [40, 35, 60, 75, 60, 75, 50],
     },
     {
       id: 2,
-      name: 'Ethereum',
+      name: "Ethereum",
       price: 3480.65,
-      logo: 'ethereum.png',
+      logo: "ethereum.png",
       increase: false,
       data: [25, 30, 60, 50, 80, 55, 80],
     },
     {
       id: 3,
-      name: 'Solana',
+      name: "Solana",
       price: 150.2,
-      logo: 'solana.png',
+      logo: "solana.png",
       increase: true,
       data: [40, 45, 40, 80, 50, 60, 35],
     },
     {
       id: 4,
-      name: 'Dogecoin',
+      name: "Dogecoin",
       price: 0.1572,
-      logo: 'dogecoin.png',
+      logo: "dogecoin.png",
       increase: true,
       data: [35, 70, 60, 80, 50, 60, 40],
     },
-  ]
+  ];
   const topGainers = [
     {
       id: 1,
-      name: 'PAPPAY',
+      name: "PAPPAY",
       price: 0.00374,
-      logo: 'pappay.png',
+      logo: "pappay.png",
       increase: true,
       data: [30, 50, 45, 60, 70, 40, 45],
     },
     {
       id: 2,
-      name: 'Bitcoin Asia',
+      name: "Bitcoin Asia",
       price: 0.02096,
-      logo: 'bitcoin-asia.png',
+      logo: "bitcoin-asia.png",
       increase: true,
       data: [25, 60, 50, 60, 35, 50, 70],
     },
     {
       id: 3,
-      name: 'MoonRock',
+      name: "MoonRock",
       price: 0.004907,
-      logo: 'moonrock.png',
+      logo: "moonrock.png",
       increase: true,
       data: [40, 35, 40, 25, 50, 70, 45],
     },
     {
       id: 4,
-      name: 'NinjaFloki',
+      name: "NinjaFloki",
       price: 0.000123,
-      logo: 'ninjafloki.png',
+      logo: "ninjafloki.png",
       increase: true,
       data: [45, 35, 40, 30, 25, 45, 35],
     },
-  ]
+  ];
   const recents = [
     {
       id: 1,
-      name: 'MetaCraft',
+      name: "MetaCraft",
       price: 0.0608,
-      logo: 'metacraft.png',
+      logo: "metacraft.png",
       increase: false,
       data: [40, 50, 45, 60, 35, 40, 45],
     },
     {
       id: 2,
-      name: 'Frog',
+      name: "Frog",
       price: 0.5875,
-      logo: 'frog.png',
+      logo: "frog.png",
       increase: false,
       data: [25, 50, 45, 48, 40, 60, 45],
     },
     {
       id: 3,
-      name: 'Musk Doge',
+      name: "Musk Doge",
       price: 0.04041,
-      logo: 'musk-doge.png',
+      logo: "musk-doge.png",
       increase: true,
       data: [25, 35, 60, 45, 50, 45, 45],
     },
     {
       id: 4,
-      name: '2SHARE',
+      name: "2SHARE",
       price: 1366.24,
-      logo: '2share.png',
+      logo: "2share.png",
       increase: true,
       data: [35, 30, 60, 50, 35, 45, 40],
     },
-  ]
+  ];
 
   return (
     <div className="App">
@@ -211,37 +211,49 @@ function App() {
         <section className="max-w-screen-xl mx-2 sm:mx-auto px-4 sm:px-6 lg:px-0 py-6 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12">
           <div className="w-full flex flex-col lg:flex-row items-center justify-center">
             <LandingCryptoStatistic
-          title="🔥 Trending"
-          datasets={trendings}
-          style="xl:border-r border-gray-200 lg:px-8"
-        />
-        <LandingCryptoStatistic
-          title="🚀 Top Gainers"
-          datasets={topGainers}
-          style="xl:border-r border-gray-200 lg:px-8"
-        />
-        <LandingCryptoStatistic
-          title="💎 Recently Added"
-          datasets={recents}
-          style="lg:px-8"
-        />
+              title="🔥 Trending"
+              datasets={trendings}
+              style="xl:border-r border-gray-200 lg:px-8"
+            />
+            <LandingCryptoStatistic
+              title="🚀 Top Gainers"
+              datasets={topGainers}
+              style="xl:border-r border-gray-200 lg:px-8"
+            />
+            <LandingCryptoStatistic
+              title="💎 Recently Added"
+              datasets={recents}
+              style="lg:px-8"
+            />
           </div>
         </section>
 
         {/* <!-- Buy and trade section --> */}
-    <section className="w-full my-24">
-      <BaseSection>
-        {/* <LandingBuyTradeImage className="sm:hidden mb-8" /> */}
-        <div data-aos="fade-right" className="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
-          <h2 className="text-4xl font-semibold sm:pr-8 xl:pr-12">
-            Buy & trade on the <br className="hidden sm:block" />
-            original crypto exchange.
-          </h2>
-          <p className="paragraph">
-            Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC crypto-currency
-          </p>
-          <div className="space-y-6 lg:pr-12">
-            {/* <LandingExchange
+        <section className="w-full my-24">
+          <BaseSection>
+            <div className="col-span-12 lg:col-span-6 sm:hidden mb-8">
+              <div className="w-full">
+                <img
+                  src={require("./assets/img/buy-and-trade.webp")}
+                  className="mt-4 sm:-mt-4"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              data-aos="fade-right"
+              className="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4"
+            >
+              <h2 className="text-4xl font-semibold sm:pr-8 xl:pr-12">
+                Buy & trade on the <br className="hidden sm:block" />
+                original crypto exchange.
+              </h2>
+              <p className="paragraph">
+                Buy now and get 40% extra bonus Minimum pre-sale amount 25
+                Crypto Coin. We accept BTC crypto-currency
+              </p>
+              <div className="space-y-6 lg:pr-12">
+                {/* <LandingExchange
               title="Amount"
               name="amount"
               type="number"
@@ -249,7 +261,7 @@ function App() {
               :exchange-selected="currencySelected"
               :exchanges="currencies"
             /> */}
-            {/* <LandingExchange
+                {/* <LandingExchange
               title="Get"
               name="get"
               type="number"
@@ -257,12 +269,22 @@ function App() {
               :exchange-selected="cryptoSelected"
               :exchanges="cryptocurrencies"
             /> */}
-            <BaseButton style="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">Buy Now</BaseButton>
-          </div>
-        </div>
-        {/* <LandingBuyTradeImage data-aos="fade-left" class="hidden sm:block" /> */}
-      </BaseSection>
-    </section>
+                <BaseButton style="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">
+                  Buy Now
+                </BaseButton>
+              </div>
+            </div>
+            <div data-aos="fade-left"  className="col-span-12 lg:col-span-6 hidden sm:block" v-bind="$attrs">
+              <div className="w-full">
+                <img
+                  src={require("./assets/img/buy-and-trade.webp")}
+                  className="mt-4 sm:-mt-4"
+                  alt=""
+                />
+              </div>
+            </div>
+          </BaseSection>
+        </section>
       </DefaultLayout>
     </div>
   );

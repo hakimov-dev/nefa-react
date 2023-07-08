@@ -11,8 +11,7 @@ interface cryptoData {
 }
 
 const CryptoStatistic = (props: any) => {
-
-    console.log(props.datasets)
+    
   return (
     <div
       className={`w-full lg:w-1/3 mt-6 lg:mt-0 overflow-hidden space-y-6 ${props.style}`}
