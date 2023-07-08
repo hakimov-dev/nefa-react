@@ -340,6 +340,32 @@ function App() {
             </div>
           </div>
         </section>
+        {/* <!-- Credit card section --> */}
+    <section className="w-full my-36">
+      <BaseSection data-aos="fade-down">
+        <div className="col-span-12 lg:col-span-7">
+          <div className="w-full">
+            <img 
+            src={require('./assets/img/nefa-cc.webp')} 
+            className="w-[95%]" alt="" />
+          </div>
+        </div>
+        <div className="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-20">
+          <h2 className="text-4xl font-semibold">
+            Introducing the <span className="text-header-gradient">NEFA</span> Credit Card
+          </h2>
+          <p className="paragraph">Subject to cardholder and rewards terms which will be available at application.</p>
+          <ul className="space-y-4 sm:space-y-2">
+            {/* <LandingListItem title="Up to 3% back on purchases" />
+            <LandingListItem title="Earn rewards in bitcoin or any crypto on NEFA" />
+            <LandingListItem title="No annual fee" /> */}
+          </ul>
+          <BaseButton
+            style="w-full sm:max-w-[240px] px-10 py-4 bg-inherit text-gradient border border-[#0c66ee] text-base"
+            >Join the waitlist</BaseButton>
+        </div>
+      </BaseSection>
+    </section>
       </DefaultLayout>
     </div>
   );
