@@ -7,6 +7,7 @@ import BaseSection from "./components/base/Section";
 import LandingCryptoStatistic from "./components/landing/CryptoStatistic";
 import LandingExchange from "./components/landing/Exchange";
 import LandingListItem from "./components/landing/ListItem";
+import LandingStep from "./components/landing/Step"
 
 function App() {
   const trendings = [
@@ -515,7 +516,11 @@ function App() {
           data-aos="fade-up"
           className="relative w-full flex flex-col lg:flex-row items-center justify-between space-y-12 lg:space-y-0 px-4 xl:px-10 mt-16 sm:mt-8"
         >
-          {/* <LandingStep v-for="step in steps" :key="step.title" :step="step" /> */}
+          {steps.map((step) => {
+            return (
+              <LandingStep step={step} />
+            )
+          })}
           <img
             src={require('./assets/img/getting-started/arrow.png')}
             className="hidden lg:inline-block absolute top-32 left-64 xl:left-[22rem] w-24 xl:w-[9.5rem]"
