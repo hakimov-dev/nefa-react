@@ -329,11 +329,14 @@ function App() {
               data-aos="fade-up"
               className="flex flex-wrap items-center justify-center"
             >
-              {/* <LandingPartnerImage
-            v-for="img in ['clever.png', 'diamon-cutts.png', 'swiss-finance.png', 'gambio.png']"
-            :key="img"
-            :img="img"
-          /> */}
+               {['clever.png', 'diamon-cutts.png', 'swiss-finance.png', 'gambio.png'].map(img => {
+                return (
+                <img 
+                 src={require(`./assets/img/partner/${img}`)}
+                 className="sm:w-1/2 lg:w-72 mx-auto" alt="" 
+                 />
+                )
+               })}
             </div>
           </div>
         </section>
