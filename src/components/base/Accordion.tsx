@@ -15,13 +15,12 @@ const Accordion = (props: any) => {
       >
         <div className="flex items-center justify-between">
           <span className="font-medium">{props.accordion.title}</span>
-          {/* {/* <ChevronUpIcon v-if="selected" :size="20" /> */}
           {selected ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="w-6 h-6"
+              className="h-4"
             >
               <path
                 fillRule="evenodd"
@@ -34,7 +33,7 @@ const Accordion = (props: any) => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="w-6 h-6"
+              className="h-4"
             >
               <path
                 fillRule="evenodd"
