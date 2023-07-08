@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
 import Navbar from '../components/base/Navbar'
+import Footer from '../components/base/Footer'
 
 interface SlotComponentProps {
     children: ReactNode;
@@ -15,7 +16,7 @@ const Default: React.FC<SlotComponentProps> = ({ children }) =>  {
          {/* Content */}
          {children}
 
-        {/* Footer's place */}
+        <Footer/>
       </div>
     </div>
   );
