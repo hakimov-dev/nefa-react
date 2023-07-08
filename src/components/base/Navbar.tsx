@@ -6,9 +6,8 @@ import BaseButton from "./Button";
 const Navbar = () => {
   const [open, setOpen] = useState<Boolean>(false);
 
-
-  function toggleSidebar(){
-    setOpen(!open)
+  function toggleSidebar() {
+    setOpen(!open);
   }
   return (
     <nav id="navbar" className="relative z-10 w-full text-neutral-800">
@@ -66,16 +65,29 @@ const Navbar = () => {
             <NavLink name="Watchlist" url="#" />
             <NavLink name="NFT" url="#" />
             <NavLink name="Portfolio" url="#" />
+            <div className="flex items-center justify-normal">
+              <NavLink name="Products" url="#" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-4 -ml-3 mt-1"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
           </ul>
         </div>
-        <div
-          className={`${open ? 'flex' : 'hidden lg:flex'} space-x-3`}
-        >
+        <div className={`${open ? "flex" : "hidden lg:flex"} space-x-3`}>
           <BaseButton style="px-8 xl:px-10 py-3 mt-2 bg-inherit text-gradient border border-[#0c66ee]">
-              Login
-            </BaseButton>
+            Login
+          </BaseButton>
           <BaseButton style="px-8 xl:px-10 py-3 mt-2 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] text-white">
-              Sign Up
+            Sign Up
           </BaseButton>
         </div>
       </div>
