@@ -55,21 +55,23 @@ const CryptoStatistic = (props: any) => {
                 </tr>
               </thead>
               <tbody>
-                {props.datasets.map((data: cryptoData) => {
-                  <tr
+                {props.datasets.map(function(data: cryptoData, i: number) {
+                 return (
+                    <tr
+                    key={i}
                     className="border-b border-gray-200"
                   >
                     <td className="py-4 whitespace-nowrap">
                       <div className="flex items-center space-x-2">
-                        {/* <img
+                        <img
                           src={require(`../../assets/img/crypto-icon/${data.logo}`)}
                           alt=""
-                        /> */}
+                        />
                         <span>{data.name}</span>
                       </div>
                     </td>
                     <td className="py-4 whitespace-nowrap">
-                      {/* <div className="flex items-center">
+                      <div className="flex items-center">
                         {data.increase ? (
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -102,15 +104,15 @@ const CryptoStatistic = (props: any) => {
                           </svg>
                         )}
                         <span>${data.price}</span>
-                      </div> */}
+                      </div>
                     </td>
                     <td className="hidden sm:block whitespace-nowrap">
-                        some
                       {/* <div> */}
                         {/* <LineChart class="w-28 h-12 -mx-2" :datasets="data.data" :increase="data.increase" /> */}
                       {/* </div> */}
                     </td>
-                  </tr>;
+                  </tr>
+                 )
                 })}
               </tbody>
             </table>
