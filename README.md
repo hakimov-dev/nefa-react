@@ -7,6 +7,9 @@
 ## Versions 🔗
 [Vue(nuxt js) version](https://github.com/RSurya99/nefa)
 
+## Demo 💻
+[Demo link](https://hakimov8181.gumroad.com/l/epaty)
+
 ## About this project 👨‍💻
 
 The NEFA Landing Template is a modern and sleek landing page template created using a combination of React, TypeScript, and Aos (Animate on Scroll) library. It offers a visually appealing and interactive design that is perfect for showcasing products, services, or any other promotional content.
